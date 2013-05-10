@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS drops: Playing with a -webkit-background-clip: text property</title>
+
+	<style>
+	 /**
+	 * Playing with a -webkit-background-clip: text property,  inspired by Pirelli calendar 2013 (http://www.pirellical.com/2013/). Check «Enter your code» link.
+	 * Works only in Chrome(!).
+	 */
+
+		body{
+			background: #065;
+			margin: 0; padding: 50px 0;
+			text-align: center;
+			font: 30px monospace; color: #6EAD87;
+		}
+
+		a{
+			background: #6EAD87;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			-webkit-animation-delay: 0.3s;
+			-webkit-animation-name: highlight;
+			-webkit-animation-duration: 3s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: ease;
+			-webkit-animation-direction: normal;
+			-webkit-animation-fill-mode: both;
+		}
+
+
+		@-webkit-keyframes highlight {
+			1%   { background: -webkit-linear-gradient(left,  #6ead87 0%, #ffffff 0%, #ffffff 29%, #6ead87 62%) }
+			5%   { background: -webkit-linear-gradient(left,  #6ead87 0%, #ffffff 20%, #ffffff 38%, #6ead87 62%) }
+			10%  { background: -webkit-linear-gradient(left,  #6ead87 0%, #ffffff 42%, #ffffff 60%, #6ead87 100%) }
+			15%  { background: -webkit-linear-gradient(left,  #6ead87 37%, #ffffff 74%, #ffffff 85%, #6ead87 100%) }
+			20%  { background: -webkit-linear-gradient(left,  #6ead87 51%, #ffffff 88%, #ffffff 100%, #6ead87 100%) }
+			100% { background: -webkit-linear-gradient(left,  #6ead87 100%, #ffffff 100%, #ffffff 100%, #6ead87 100%) }
+		}
+	</style>
+
+</head>
+<body>
+	<a href="#">Look, I am working in Chrome!</a>
+</body>
+</html>

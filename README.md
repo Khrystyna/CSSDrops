@@ -6,7 +6,7 @@ Each drop can be previewed at Dabblet:
 
      Dabblet: http://dabblet.com/gist/5474237.
 
-  2. Will be soon...
+  2. Great solution how to add placeholder to contenteditable div. Check out author Codepen here: http://codepen.io/mrmoje/pen/lkLez.
 
 
 

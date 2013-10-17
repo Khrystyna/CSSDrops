@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS drops: Adding placeholder to contenteditable div</title>
+
+  <style>
+      /**
+      * Great solution how to add placeholder to contenteditable div. Check out author Codepen here: http://codepen.io/mrmoje/pen/lkLez.
+      */
+
+    body{
+      background: #065;
+      margin: 0; padding: 50px 0;
+      text-align: center;
+      font: 18px monospace; color: #6EAD87;
+    }
+
+    div[contentEditable=true]{
+      background: #f8f8f8;
+
+      width: 50%; min-height: 100px;
+      margin: auto;
+      padding: 15px;
+    }
+
+
+    [contentEditable=true]:empty:not(:focus):before{
+      content: attr(data-placeholder);
+      color: #c3c3c3;
+    }
+  </style>
+
+
+  <!-- Awesome library from Lea Verou takes care about prefixes -->
+  <script src="js/prefixfree.min.js"></script>
+</head>
+<body>
+<div contentEditable="true" data-placeholder="Look, I am a placeholder!"></div>
+</body>
+</html>
